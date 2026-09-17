@@ -30,7 +30,9 @@ pipeline {
                 DEPLOY_SERVER= "production-server"
             }
             steps {
-                echo 'Deploying application'
+                echo '$APP_NAME'
+                echo '$ENVIRONEMNT'
+                echo '$DEPLOY_SERVER'
             }
         }
     }// this starts before the last curly braces of the pipeline being finished and post means after everything 
