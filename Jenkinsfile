@@ -31,9 +31,9 @@ pipeline {
             }
             steps {
                 sh '''
-                echo '$APP_NAME'
-                echo '$ENVIRONEMNT'
-                echo '$DEPLOY_SERVER'
+                echo "$APP_NAME"
+                echo "$ENVIRONMENT"
+                echo "$DEPLOY_SERVER"
                 '''
             }
         }
