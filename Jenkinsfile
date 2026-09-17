@@ -1,10 +1,15 @@
 pipeline {
     agent any
-
+// if we have multiple linux commands then specify it as sh ''' and when it ends then again ''' this is how it works
     stages {
         stage('Build') {
             steps {
-                sh 'pwd'
+                sh '''
+                    echo "Starting Build"
+                    pwd
+                    ls
+                    echo "Build complete"
+                '''
             }
         }
 
