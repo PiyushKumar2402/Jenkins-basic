@@ -24,7 +24,7 @@ pipeline {
                 echo 'Deploying application'
             }
         }
-    }
+    }// this starts before the last curly braces of the pipeline being finished and post means after everything 
     post{
         success{
             echo "pipeline build successfull"
