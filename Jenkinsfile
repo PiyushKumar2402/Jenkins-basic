@@ -15,7 +15,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh 'pwd'
+                sh 'exit 1'
             }
         }
 
