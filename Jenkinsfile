@@ -7,7 +7,7 @@ pipeline {
             )
     }
     agent {
-        label 'built-in'
+        label 'built-in-windows'
     }
 // if we have multiple linux commands then specify it as sh ''' and when it ends then again ''' this is how it works
 //so there are basically two types of env variables same as in coding global and local
