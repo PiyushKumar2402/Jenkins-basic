@@ -46,6 +46,11 @@ pipeline {
                     }
                 }
             }
+        stage('test Docker'){
+            steps{
+                sh 'docker --version'
+            }
+        }
 
         stage('Deploy') {
            when {
