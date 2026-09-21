@@ -32,15 +32,13 @@ pipeline {
         }
 
         stage('Deploy') {
-            environment{
-                DEPLOY_SERVER= "production-server"
-            }
-            steps {
-                sh '''
-                echo "$APP_NAME"
-                echo "$ENVIRONMENT"
-                echo "$DEPLOY_SERVER"
-                '''
+           when {
+               expression{
+                   params.ENVIRONMENT == 'Production'
+               }
+           }
+            steps{
+                echo "Deploying to production"
             }
         }
     }// this starts before the last curly braces of the pipeline being finished and post means after everything 
