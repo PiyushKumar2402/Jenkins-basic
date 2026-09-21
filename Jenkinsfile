@@ -6,7 +6,9 @@ pipeline {
             description: 'Select deployment environment'
             )
     }
-    agent any
+    agent {
+        label 'built-in'
+    }
 // if we have multiple linux commands then specify it as sh ''' and when it ends then again ''' this is how it works
 //so there are basically two types of env variables same as in coding global and local
 //which are made on top are available to everyone which are made in satges are only available to specific persons
