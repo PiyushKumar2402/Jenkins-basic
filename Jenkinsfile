@@ -33,13 +33,13 @@ pipeline {
         stage('Credentials Test'){
             steps{
                 script{
-                    withCredentials{[
+                    withCredentials([
                         string(
                             credentialsId:'demo-secret',
                             variable:'MY_SECRET'
                         )
                         ]){
-                        sh echo 'Secret is avaiable to jenkins'
+                        sh echo '"Secret is avaiable to jenkins"'
                         } 
                     }
                 }
