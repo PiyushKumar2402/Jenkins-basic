@@ -51,6 +51,11 @@ pipeline {
                 sh 'docker build -t jenkins-demo .'
             }
         }
+        stage('Docker check'){
+            steps{
+                sh 'docker images'
+            }
+        }
 
         stage('Deploy') {
            when {
