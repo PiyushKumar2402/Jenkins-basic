@@ -39,7 +39,7 @@ pipeline {
                             variable:'MY_SECRET'
                         )
                         ]){
-                        sh echo '"Secret is avaiable to jenkins"'
+                        sh 'echo "Secret is avaiable to jenkins"'
                         } 
                     }
                 }
