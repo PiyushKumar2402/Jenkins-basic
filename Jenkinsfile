@@ -53,11 +53,6 @@ pipeline {
         }
         stage('Docker check'){
             steps{
-                sh 'docker images'
-            }
-        }
-        stage('Docker check'){
-            steps{
                 sh '''
                 docker rm -f jenkins-demo-contianer || true
                 docker run --name jenkins-demo-container jenkins-demo
