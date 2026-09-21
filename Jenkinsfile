@@ -46,9 +46,9 @@ pipeline {
                     }
                 }
             }
-        stage('test Docker'){
+        stage('Docker build'){
             steps{
-                sh 'docker info'
+                sh 'docker build -t jenkins-demo'
             }
         }
 
