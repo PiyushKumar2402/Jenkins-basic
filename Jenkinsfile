@@ -30,6 +30,21 @@ pipeline {
                 sh 'pwd'
             }
         }
+        stage('Credentials Test'){
+            steps{
+                script{
+                    withCredentials{[
+                        string(
+                            credentialsId:'demo-secret',
+                            variable:'MY_SECRET'
+                        )
+                        ]){
+                        sh echo 'Secret is avaiable to jenkins'
+                        } 
+                    }
+                }
+            }
+        }
 
         stage('Deploy') {
            when {
